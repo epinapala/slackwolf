@@ -8,6 +8,6 @@ class Beholder extends Role
 	}
 
 	public function getDescription() {
-		return "A villager who learns who the Seer is on the first night.";
+		return "A villager who learns who the Cop is on the first night.";
 	}
 }

@@ -62,10 +62,10 @@ class OptionsManager
         $this->options[] = new Option(OptionName::role_bodyguard, OptionType::Bool, "on", "Use Bodyguard role in random games.");
         $this->options[] = new Option(OptionName::role_hunter, OptionType::Bool, "on", "Use Hunter role in random games.");
         $this->options[] = new Option(OptionName::role_lycan, OptionType::Bool, "on", "Use Lycan role in random games.");
-        $this->options[] = new Option(OptionName::role_seer, OptionType::Bool, "on", "Use Seer role in random games.");
-        $this->options[] = new Option(OptionName::role_tanner, OptionType::Bool, "on", "Use Tanner role in random games.");
+        $this->options[] = new Option(OptionName::role_seer, OptionType::Bool, "on", "Use Cop role in random games.");
+        $this->options[] = new Option(OptionName::role_tanner, OptionType::Bool, "on", "Use Fool role in random games.");
         $this->options[] = new Option(OptionName::role_witch, OptionType::Bool, "on", "Use Witch role in random games.");
-        $this->options[] = new Option(OptionName::role_wolfman, OptionType::Bool, "on", "Use Wolf Man role in random games.");
+        $this->options[] = new Option(OptionName::role_wolfman, OptionType::Bool, "on", "Use God Father role in random games.");
 
         $this->loadOptions();
     }

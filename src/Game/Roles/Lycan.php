@@ -16,6 +16,6 @@ class Lycan extends Role
 	}
 
 	public function getDescription() {
-		return "A villager who appears to the Seer as a Werewolf.";
+		return "A villager who appears to the Seer as a Mafia.";
 	}
 }

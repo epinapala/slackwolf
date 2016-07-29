@@ -12,6 +12,6 @@ class WolfMan extends Werewolf
 	}
 
 	public function getDescription() {
-		return "A werewolf who appears to the Seer as a Villager.";
+		return "A mafia who appears to the Cop as a Villager.";
 	}
 }

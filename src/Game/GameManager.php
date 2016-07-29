@@ -234,13 +234,13 @@ class GameManager
         if($winningTeam !== null) {
             $winMsg = ":clipboard: Role Summary\r\n--------------------------------------------------------------\r\n{$playerList}\r\n\r\n:tada: The game is over. The ";
             if ($winningTeam == Role::VILLAGER) {
-                $winMsg .= "Townsfolk are victorious!";
+                $winMsg .= "Villagers are victorious!";
             }
             elseif ($winningTeam == Role::WEREWOLF) {
-                $winMsg .= "Werewolves are victorious!";
+                $winMsg .= "Mafia are victorious!";
             }
             elseif ($winningTeam == Role::TANNER) {
-                $winMsg .= "Tanner is victorious!";
+                $winMsg .= "Fool is victorious!";
             }
             else {
                 $winMsg .= "UnknownTeam is victorious!";
@@ -383,19 +383,19 @@ class GameManager
                             $werewolves = PlayerListFormatter::format($game->getWerewolves());
                             $client->send("The werewolves are: {$werewolves}", $dmc);
                         } else {
-                            $client->send("You are the only werewolf.", $dmc);
+                            $client->send("You are the only mafia.", $dmc);
                         }
                     }
 
                     if ($player->role->isRole(Role::SEER)) {
-                        $client->send("Seer, select a player by saying !see #channel @username.\r\nDO NOT DISCUSS WHAT YOU SEE DURING THE NIGHT, ONLY DISCUSS DURING THE DAY IF YOU ARE NOT DEAD!", $dmc);
+                        $client->send("Cop, select a player by saying !see #channel @username.\r\nDO NOT DISCUSS WHAT YOU SEE DURING THE NIGHT, ONLY DISCUSS DURING THE DAY IF YOU ARE NOT DEAD!", $dmc);
                     }
 
                     if ($player->role->isRole(Role::BEHOLDER)) {
                         $seers = $game->getPlayersOfRole(Role::SEER);
                         $seers = PlayerListFormatter::format($seers);
 
-                        $client->send("The seer is: {$seers}", $dmc);
+                        $client->send("The Cop is: {$seers}", $dmc);
                     }
                 });
         }
@@ -403,7 +403,7 @@ class GameManager
         $playerList = PlayerListFormatter::format($game->getLivingPlayers());
         $roleList = RoleListFormatter::format($game->getLivingPlayers());
 
-        $msg = ":wolf: It is raining, and a new game of Werewolf is starting! For a tutorial, type !help.\r\n\r\n";
+        $msg = ":squirrel: It is raining, and a new game of Mafia is starting! For a tutorial, type !help.\r\n\r\n";
         $msg .= "Players: {$playerList}\r\n";
         $msg .= "Possible Roles: {$game->getRoleStrategy()->getRoleListMsg()}\r\n\r\n";
 
@@ -455,7 +455,7 @@ class GameManager
                   });
         }
 
-        $seerMsg = ":crystal_ball: Seer, select a player by saying !see #channel @username.";
+        $seerMsg = ":police_car: Cop, select a player by saying !see #channel @username.";
 
         $seers = $game->getPlayersOfRole(Role::SEER);
 

@@ -8,6 +8,6 @@ class Tanner extends Role
 	}
 
 	public function getDescription() {
-		return "A player not on the side of the villagers or the werewolves who wins if is killed.";
+		return "A player not on the side of the villagers or the mafia who wins if is killed.";
 	}
 }

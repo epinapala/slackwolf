@@ -33,14 +33,14 @@ class Role
 	}
 
     const VILLAGER = "Villager";
-    const SEER = "Seer";
-    const WEREWOLF = "Werewolf";
+    const SEER = "Cop";
+    const WEREWOLF = "Mafia";
 
     const BEHOLDER = "Beholder";
     const BODYGUARD = "Bodyguard";
     const HUNTER = "Hunter";
     const LYCAN = "Lycan";
-    const TANNER = "Tanner";
+    const TANNER = "Fool";
     const WITCH = "Witch";
     const WOLFMAN = "Wolf Man";
 
