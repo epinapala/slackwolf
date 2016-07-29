@@ -8,7 +8,7 @@ use Slackwolf\Game\Roles\Seer;
 use Slackwolf\Game\Roles\Tanner;
 use Slackwolf\Game\Roles\Witch;
 use Slackwolf\Game\Roles\WolfMan;
-
+use Slackwolf\Game\Roles\Granny;
 
 class Role
 {
@@ -33,16 +33,17 @@ class Role
 	}
 
     const VILLAGER = "Villager";
-    const SEER = "Seer";
-    const WEREWOLF = "Werewolf";
+    const SEER = "Cop";
+    const WEREWOLF = "Mafia";
 
     const BEHOLDER = "Beholder";
     const BODYGUARD = "Bodyguard";
     const HUNTER = "Hunter";
     const LYCAN = "Lycan";
-    const TANNER = "Tanner";
+    const TANNER = "Fool";
     const WITCH = "Witch";
     const WOLFMAN = "Wolf Man";
+    const GRANNY = "Granny";
 
     public static function getSpecialRoles() {
     	return [
@@ -53,7 +54,8 @@ class Role
             new Seer(),
             new Tanner(),
             new Witch(),
-            new WolfMan()
+            new WolfMan(),
+            new Granny()
         ];
     }
 }
